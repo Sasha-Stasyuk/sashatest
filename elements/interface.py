@@ -1,0 +1,26 @@
+from tkinter import *
+zodiac_names = ["Incorrect date of birth", "Capricorn", "Aquarius", "Pisces", "Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius"]
+zodiac_files = ["start.gif", "capricorn.gif", "aquarius.gif", "pisces.gif", "aries.gif", "taurus.gif", "gemini.gif", "Cancer.gif", "leo", "virgo.gif", "libra.gif", "scorpio.gif", "sagittarius.gif" ]
+window = Tk()
+window.geometry("300x500")
+window.resizable(False, False)
+window.title("Whats your zodaic symbol?")
+frame = LabelFrame(text = "What is your birthday?", width = 200, height = 150)
+frame.pack(fill = X)
+Day = Label(frame, text = "Day: ")
+Day.grid(row = 0, column = 0)
+Month = Label(frame, text ="Month: ")
+Month.grid(row = 1, column = 0)
+day_entry = Entry(frame, width = 30)
+day_entry.grid(row = 0, column = 1, padx = 15, pady = 10)
+month_entry = Entry(frame, width = 30)
+month_entry.grid(row = 1, column = 1, padx = 15, pady = 10)
+Reveal_symbol = Button(frame, text = "☆*: .｡.Reveal symbol.｡.:*☆", width = 20)
+Reveal_symbol.grid(row = 2, column = 0, columnspan = 2, padx = 30)
+name = Label(text = "Put in date of birth please")
+name.pack(pady = 15)
+gif = PhotoImage(file = "img/start.gif")
+picture = Label(text = "", image = gif)
+picture.pack()
+if __name__ == "__main__":  
+    window.mainloop()
