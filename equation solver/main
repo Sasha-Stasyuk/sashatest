@@ -1,0 +1,16 @@
+from tkinter import *
+window = Tk()
+window.geometry("550x300")
+window.resizable(False, False)
+window.title("Hey there! im T.B.A.E.S.E! Ask me any equation!")
+frame = Frame()
+frame.pack()
+label = Label(frame, text = "please input an equation using one of the symbols below: \n    + - / // * ** %")
+label.pack()
+
+
+
+
+
+
+window.mainloop()
